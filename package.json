@@ -1,0 +1,49 @@
+{
+  "name": "js-dev-env-omedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "babel-node scripts/server.js",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel start localtunnel",
+    "preshare": "node scripts/start.js",
+    "postshare": "node scripts/end.js",
+    "lecture": "node scripts/lecture.js",
+    "prelecture": "node scripts/start.js",
+    "postlecture": "node scripts/end.js",
+    "build": "webpack --config webpack.config.js",
+    "format:all": "prettier --write \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aristocrat4/js-dev-env-omedia.git"
+  },
+  "author": "gala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aristocrat4/js-dev-env-omedia/issues"
+  },
+  "homepage": "https://github.com/Aristocrat4/js-dev-env-omedia#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/node": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.2",
+    "eslint": "^8.27.0",
+    "express": "^4.18.2",
+    "html-webpack-plugin": "^5.5.0",
+    "localtunnel": "^2.0.2",
+    "open": "^8.4.0",
+    "path": "^0.12.7",
+    "prettier": "^2.7.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-middleware": "^5.3.3"
+  }
+}
